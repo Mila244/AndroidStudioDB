@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void abrirListaContactos(View view) {
-        Intent intent = new Intent(this, ListaContactosActivity.class);
+        Intent intent = new Intent(this, ContactosActivity.class);
         startActivity(intent);
     }
 }

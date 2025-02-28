@@ -12,39 +12,28 @@
         android:id="@+id/editTextTelefono"
         android:layout_width="match_parent"
         android:layout_height="135dp"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="80dp"
         android:gravity="center"
         android:hint="0"
         android:inputType="none"
-        android:textSize="80sp"
+        android:textSize="65sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.281"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" /><![CDATA[
-
-
-
-    tools:ignore="MissingConstraints" />
-
-
-
-
-
-    ]]>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="356dp"
-        android:layout_height="477dp"
+        android:layout_width="351dp"
+        android:layout_height="458dp"
         android:columnCount="3"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/btnLlamar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.708">
+        app:layout_constraintVertical_bias="0.638">
 
         <Button
             android:id="@+id/btn7"
@@ -100,6 +89,7 @@
             android:text="6"
             android:textSize="40sp" />
 
+        <!-- Botones numéricos 1-2-3 -->
         <Button
             android:id="@+id/btn1"
             android:layout_width="100dp"
@@ -127,10 +117,17 @@
             android:text="3"
             android:textSize="40sp" />
 
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="0dp" />
+        <Button
+            android:id="@+id/btnBorrar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="#ff6961"
+            android:onClick="borrarUltimoNumero"
+            android:text="⌫"
+            android:textSize="40sp" />
 
+        <!-- Botón numérico 0 -->
         <Button
             android:id="@+id/btn0"
             android:layout_width="100dp"
@@ -140,9 +137,16 @@
             android:text="0"
             android:textSize="40sp" />
 
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="0dp" />
+
+        <Button
+            android:id="@+id/btnContactos"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="#77aaff"
+            android:onClick="abrirListaContactos"
+            android:text="👨🏾‍💼"
+            android:textSize="40sp" />
     </GridLayout>
 
     <Button
@@ -150,14 +154,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="124dp"
         android:backgroundTint="#77dd77"
         android:onClick="guardarContacto"
         android:text="Guardar Contacto"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.031"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -165,11 +168,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="60dp"
         android:backgroundTint="#77aaff"
         android:onClick="realizarLlamada"
-        android:text="Llamar"
-        android:textSize="18sp"
+        android:text="📞"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
